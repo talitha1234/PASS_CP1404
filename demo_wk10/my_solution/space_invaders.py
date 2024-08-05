@@ -58,10 +58,14 @@ def choose_alien(aliens):  # OPTIONAL
     is_valid_input = False
     while not is_valid_input:
         try:
-            alien_choice = aliens[int(input("Choose Alien (number): "))]
-            is_valid_input = True
-        except IndexError:
-            print("Choose a valid alien")
+            alien_index = int(input("Choose Alien (number): "))
+            if alien_index < 0:
+                print("Invalid (must be greater than 0)")
+            elif alien_index > len(aliens) - 1:
+                print("Invalid (too high)")
+            else:
+                alien_choice = aliens[alien_index]
+                is_valid_input = True
         except ValueError:
             print("Not an integer")
     return alien_choice
