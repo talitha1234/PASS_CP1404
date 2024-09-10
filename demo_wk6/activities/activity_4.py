@@ -1,5 +1,6 @@
 """
-Convert the below two lists into one dictionary with the key : flowers and value : colors. Then print each flower in the sentence format:
+Convert the below two lists into one dictionary with the key : flowers and value : colors. Then print each flower in the
+sentence format:
 “The name of the flower is ________ and they are typically ________ in color”
 
 For example:
