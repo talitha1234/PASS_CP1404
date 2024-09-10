@@ -14,7 +14,9 @@ thing_2 = file_in.read()
 print(thing_2)
 # file_in.close()
 
-
+# Above line closes the file before it gets to thing 3
+# Slides ask what we get when it's closed
+# Then once they figure out what's wrong ask what do we get if it's still open?
 """What is the output of thing_3 if the file is still open?"""
 thing_3 = file_in.readlines()
 print("Start")

@@ -1,11 +1,13 @@
 """
-Activity 2 - Contacts Program. Complete each of the functions by following their instructions.
+Activity 3 - Contacts Program. Complete each of the functions by following their instructions.
 See below for an example output. Blue is for user input.
 
 Menu:
 
 
 """
+
+from operator import itemgetter
 
 MENU = """V)iew
 A)dd
@@ -27,13 +29,8 @@ def main():
             new_contact = get_contact()
             contacts.append(new_contact)
         elif choice == 'D':
-
-            contact_to_delete = get_valid_contact(contacts)
-
-            # length will be either 0 for an empty tuple or 3 for a tuple with contact details
-            if len(contact_to_delete) != 0:
-                contacts.remove(contact_to_delete)
-                print(f'{contact_to_delete[0]} has been removed')
+            # TODO: Remove pass and add code to delete contact
+            pass
 
         else:
             print("Invalid choice.")
@@ -43,45 +40,36 @@ def main():
 
 
 def display_contacts(contacts):
-    # for contact in contacts:
-    #     print(f'{contact[0]} {contact[1]}: {contact[2]}')
-    contacts_to_display = '\n'.join([f"{contact[0]} {contact[1]}: {contact[2]}" for contact in contacts])
-    print(contacts_to_display)
+    """Receives list of contacts as an input and prints each one on a new line using string formatting"""
+    # Billy Bob : 0438236777
+    # TODO: Add code to display contacts
+    for contact in contacts:
+        print(contact)
+
 
 def get_contact():
-    first_name = input("First name: ")
-    last_name = input("Last name: ")
-    phone_number = input("Phone number: ")
-    new_contact = (first_name, last_name, phone_number)
+    """Asks the user for input for the new contact's name and number. Returns the new contact as a tuple"""
+    new_contact = ()
+    # TODO: Add code to get contact
+    name = input("Enter name: ")
+    number = int(input("Enter number: "))
+    new_contact = (name, number)
     return new_contact
 
 
 def get_valid_contact(contacts):
-    # Get list of contacts with this first name
-    first_name = input("Who would you like to remove (first name): ")
-    contacts_with_first_name = []
-    contact_to_remove = ()
-    for contact in contacts:
-        if contact[0] == first_name:
-            contacts_with_first_name.append(contact)
+    """Asks the user for a first name to remove.
+    If there is more than one person with the same first name, ask the user for a surname.
+    If the name does not exist, display an error message. Returns the contact to remove as a tuple"""
 
-    # If more than one contact with first name then ask for last name
-    if len(contacts_with_first_name) > 1:
-        print(f"Found multiple entries with the first name {first_name}")
-        last_name = input("Who would you like to remove? (last name): ")
+    contact_to_remove = (input("Which contact would you like to remove? "))
+    while contact_to_remove not in contacts:
+        print("Contact not found.")
+    if contact_to_remove in contacts:
 
-        for contact in contacts:
-            if contact[1] == last_name:
-                contact_to_remove = contact
+    #     How to check for a unique contact name..
 
-    # If there's only one contact with that first name then set contact to remove as this contact
-    elif len(contacts_with_first_name) == 1:
-        for contact in contacts:
-            if first_name in contact:
-                return contact
-    else:
-        print(f'Could not find {first_name}')
-
+    # TODO: Add code to remove contact
     return contact_to_remove
 
 
