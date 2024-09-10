@@ -11,24 +11,6 @@ Activity 1 - User class
 
 
 class User:
-    def __init__(self, name="", number_of_tacos=5, score=0):
-        self.name = name
-        self.number_of_tacos = number_of_tacos
-        self.score = score
-
-
-    def give_taco(self):
-        """Give away a taco."""
-        if self.number_of_tacos > 0:
-            self.number_of_tacos -= 1
-            self.score += 1
-            print(f"{self.name} has given away 1 taco. {self.number_of_tacos} tacos remaining.")
-        else:
-            print(f"{self.name} has no remaining tacos")
-
-
-    def __str__(self):
-        return f"{self.name}, {self.score} points, {self.number_of_tacos} tacos left."
 
 
 if __name__ == '__main__':
