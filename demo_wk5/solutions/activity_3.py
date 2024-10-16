@@ -24,13 +24,14 @@ def main():
         if choice == 'V':
             display_contacts(contacts)
         elif choice == 'A':
-            new_contact = get_contact()
+            new_contact = get_new_contact()
             contacts.append(new_contact)
         elif choice == 'D':
 
-            contact_to_delete = get_valid_contact(contacts)
+            contact_to_delete = get_contact_to_remove(contacts)
 
-            # length will be either 0 for an empty tuple or 3 for a tuple with contact details
+            # length will be either 0 for an empty tuple or 3 for a tuple
+            # with contact details
             if len(contact_to_delete) != 0:
                 contacts.remove(contact_to_delete)
                 print(f'{contact_to_delete[0]} has been removed')
@@ -48,7 +49,8 @@ def display_contacts(contacts):
     contacts_to_display = '\n'.join([f"{contact[0]} {contact[1]}: {contact[2]}" for contact in contacts])
     print(contacts_to_display)
 
-def get_contact():
+
+def get_new_contact():
     first_name = input("First name: ")
     last_name = input("Last name: ")
     phone_number = input("Phone number: ")
@@ -56,7 +58,11 @@ def get_contact():
     return new_contact
 
 
-def get_valid_contact(contacts):
+def get_contact_to_remove(contacts):
+    """Asks the user for a first name to remove.
+    If there is more than one person with the same first name, ask the user for a surname.
+    If the name does not exist, display an error message. Returns the contact to remove as a tuple"""
+
     # Get list of contacts with this first name
     first_name = input("Who would you like to remove (first name): ")
     contacts_with_first_name = []

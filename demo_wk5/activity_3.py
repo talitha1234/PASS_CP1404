@@ -26,14 +26,13 @@ def main():
         if choice == 'V':
             display_contacts(contacts)
         elif choice == 'A':
-            new_contact = get_contact()
+            new_contact = get_new_contact()
             contacts.append(new_contact)
         elif choice == 'D':
             # TODO: Remove pass and add code to delete contact
             pass
-
         else:
-            print("Invalid choice.")
+            pass
         print()
         choice = input(MENU).upper()
     print("Goodbye :)")
@@ -41,36 +40,35 @@ def main():
 
 def display_contacts(contacts):
     """Receives list of contacts as an input and prints each one on a new line using string formatting"""
-    # Billy Bob : 0438236777
-    # TODO: Add code to display contacts
+    # TODO: Add code to display contacts (formatted like in word doc)
     for contact in contacts:
         print(contact)
 
 
-def get_contact():
+def get_new_contact():
     """Asks the user for input for the new contact's name and number. Returns the new contact as a tuple"""
-    new_contact = ()
-    # TODO: Add code to get contact
-    name = input("Enter name: ")
-    number = int(input("Enter number: "))
-    new_contact = (name, number)
-    return new_contact
+    # TODO: Add code to get contact (first name, last name and number)
 
 
 def get_valid_contact(contacts):
     """Asks the user for a first name to remove.
     If there is more than one person with the same first name, ask the user for a surname.
     If the name does not exist, display an error message. Returns the contact to remove as a tuple"""
+    # TODO: Add code to remove contact if first name is the same
+    first_name = input("Who would you like to remove? (first name): ")
+    for contact in contacts:
+        if contact[0] == first_name:
+            return contact[0]
 
-    contact_to_remove = (input("Which contact would you like to remove? "))
-    while contact_to_remove not in contacts:
-        print("Contact not found.")
-    if contact_to_remove in contacts:
 
-    #     How to check for a unique contact name..
-
-    # TODO: Add code to remove contact
-    return contact_to_remove
+def get_contact_to_remove(contacts):
+    """Asks the user for a first name to remove.
+    #TODO: If there is more than one person with the same first name, ask the user for a surname.
+    #TODO: If the name does not exist, display an error message. Returns the contact to remove as a tuple"""
+    first_name = input("Who would you like to remove? (first name): ")
+    for contact in contacts:
+        if contact[0] == first_name:
+            return contact
 
 
 main()
