@@ -7,7 +7,7 @@ student_number
 score
 
 Define the following methods:
-__init__ - with defaults name as an empty string, student_number as default integer 0, score default 0 as a float
+__init__ - with defaults: name as an empty string, student_number as default integer 0, score default 0 as a float
 __str__ - which uses string formatting to return something like (using the values from above):
 Henry Roberts, Student no: 13154348, Score: 66.4
 

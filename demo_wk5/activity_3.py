@@ -54,7 +54,7 @@ def get_valid_contact(contacts):
     """Asks the user for a first name to remove.
     If there is more than one person with the same first name, ask the user for a surname.
     If the name does not exist, display an error message. Returns the contact to remove as a tuple"""
-    # TODO: Add code to remove contact if first name is the same
+
     first_name = input("Who would you like to remove? (first name): ")
     for contact in contacts:
         if contact[0] == first_name:
