@@ -4,7 +4,7 @@ Activity 1 - User class
 ●	A User knows: name, number of tacos (starts at 5, goes down when they give a taco), and their score
 ●	A User can give a taco away to get a point
 ●	We should be able to print a User like:
-        Ben, 2 points, 4 tacos left
+        Chloe, 2 points, 4 tacos left
 ●	When we make a user, they start with the name we want and appropriate default values
 
 """
@@ -33,20 +33,14 @@ class User:
             print(f"{self.name} has no more tacos to give away")
 
 
-# if __name__ == '__main__':
-#     # this code will create the example output from above
-#     chloe = User("Chloe")
-#     print(chloe)
-#     for i in range(6):
-#         chloe.give_taco()
-#     print(chloe)
+if __name__ == '__main__':
+    # this code will create the example output from above
+    # Print a  user
+    chloe = User("Chloe")
 
+    # Give away a bunch of tacos
+    print(chloe)
+    for i in range(6):
+        chloe.give_taco()
+    print(chloe)
 
-"""
-Explanation on main block:
-The __main__ block is used to ensure that certain code is only executed when the script is run directly,
- and not when it is imported as a module in another script. 
-"""
-
-
-print("in class file activity 1 __name__ = ", __name__)
