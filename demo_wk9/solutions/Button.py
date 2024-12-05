@@ -1,6 +1,5 @@
 """Simple Button App"""
 # TODO: Add code to make the button change colour when you press it
-
 from kivy.app import App
 from kivy.lang import Builder
 

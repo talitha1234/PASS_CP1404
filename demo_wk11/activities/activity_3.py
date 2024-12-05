@@ -1,36 +1,7 @@
-"""
-Activity 3 - Create Questions
-
-Let’s put our “Lindsay thinking hats” on and create some exam questions using the below topics.
-
-
-Topics - Part A (Multi Choice)
-Create multiple choice questions for each of the below topics. Each question should have at least 4 different choices.
-
-Loops	Equality	Lists	Functions
-Errors	Data Structure Choice	Inheritance	SRP
-Files	Exceptions	Dictionaries	Sets
-Strings	Importing	Data Structures
-
-
-Topics - Part B (Short Answer)
-Create questions that can be answered in 4 sentences or less.
-
-
-Evaluate Expressions	Write good names	Write output [loops, enumerate]	Write code [dictionary & string formatting]
-Describe version control	Compare data structures	Write code [implement pseudocode, strings] 	Write code [refactoring, function & tuples]
-Write output [lists, list comprehension]	Write code [class]
-
-Paste your questions here then we’ll answer on collaborate
-
-
-"""
-
-#TODO: Put your questions here and then we can all answer.
+"""Questions from previous years PASS"""
 
 
 
-"""Questions from previous years"""
 
 # Names
 names = ['sam', 'john', 'mike', 'fred']

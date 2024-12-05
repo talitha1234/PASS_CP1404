@@ -56,6 +56,7 @@ def main2():
         print(c, end="")
 
 
+print()
 """" 5. Write a function that takes a list of integers as a parameter and returns a new list containing only the 
 numbers that are divisible by 3. Use a list comprehension."""
 
